@@ -1,0 +1,238 @@
+#gallery {
+    background: #fff;
+    overflow: hidden;
+    padding: 15rem 0;
+  
+}
+
+.galerija {
+    display: grid;
+    grid-template-rows: min-content max-content;
+    grid-template-columns: repeat(10, 1fr);
+
+    @media only screen and (max-width:$bp-small) {
+        grid-template-rows: min-content min-content max-content;
+        
+       } 
+
+        &__filteri {
+            grid-row: 1 / 2;
+            grid-column: 6 / 10;
+            align-self: center;
+            justify-self: center;
+            @media only screen and (max-width:$bp-slider) {
+                grid-column: 6 / -1;
+             } 
+             @media only screen and (max-width:$bp-small) {
+                grid-row: 2 / 3;
+                grid-column: 4 / 10;
+                margin-bottom: 2rem;
+               } 
+             @media only screen and (max-width:$bp-small-2) {
+               
+                grid-column: 2 / 10;
+                
+               } 
+             @media only screen and (max-width:$bp-small-3) {
+               
+                grid-column: 1 / -1;
+                
+                
+               } 
+      
+            &--p {
+               font-size: 1.6rem;
+               text-align: center;
+               font-style: italic;
+               opacity: .6;
+               @media only screen and (max-width:$bp-medium) {
+               font-size: 1.4rem;
+              } 
+               
+            }
+           
+        }
+
+        &__p {
+            grid-row: 1 / 2;
+            grid-column: 3 / 5;
+            margin: 13rem 0 5rem 0;
+            font-size: 1.4rem;
+           font-style: italic;
+           opacity: .6;
+           @media only screen and (max-width:$bp-medium) {
+            text-align: center;
+            
+              }   
+              @media only screen and (max-width:$bp-small) {
+                grid-row: 1 / 2;
+                grid-column: 2 / 7;
+                margin: 13rem 0 2rem 0;
+               } 
+              @media only screen and (max-width:$bp-small-2) {
+                
+                grid-column: 2 / 8;
+                
+               } 
+         }
+
+        &__vertical-heading {
+        
+             grid-row: 1 / 2;
+             grid-column: 3 / 6;
+             position: relative;
+             z-index: 1;
+             padding-bottom: 5rem;
+             @media only screen and (max-width:$bp-small) {
+                grid-row: 1 / 2;
+                grid-column: 3 / -1;
+                margin-left: 5rem;
+               } 
+             @media only screen and (max-width:$bp-small-4) {
+              
+                grid-column: 3 / 8;
+               } 
+            
+       
+            &--h5 {
+                color: $color-primary;
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                word-spacing: .3rem;
+                display: inline-block;
+                transform: rotate(-90deg);
+                position: absolute;
+                top: 5rem;
+                left: -15rem;
+
+                @media only screen and (max-width:$bp-medium) {
+                   font-size: 1.8rem;
+                }   
+                @media only screen and (max-width:$bp-small-3) {
+                   left: -14rem;
+                }   
+            }
+            &--h5H {
+                color: $color-primary;
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                word-spacing: .3rem;
+                display: inline-block;
+                position: absolute;
+                top: 0rem;
+                left: -7rem;
+                @media only screen and (max-width:$bp-medium) {
+                    font-size: 1.8rem;  
+                 }   
+            }
+            &--logo {
+    
+                width: 6rem;
+                height: 6rem;
+                position: absolute;
+                top: 3.5rem;
+                left: -5rem;
+                @media only screen and (max-width:$bp-small-2) {
+            
+                  width: 5rem;
+                  height: 5rem;
+              }
+   
+            }
+      
+    
+            &--h2 {
+                margin: 2.4rem 0 0 5.5rem;
+                font-size: 3.5rem;
+                font-weight: 200;
+                line-height: 4rem;
+                display: inline-block;
+                @media only screen and (max-width:$bp-medium) {
+                    font-size: 3rem;
+                 }   
+            }
+
+         }
+
+     &__slike {
+         grid-row: 2 / -1;
+         grid-column: 2 / 10;
+         display: grid;
+         grid-template-rows: 25rem 25rem 25rem 25rem 25rem;
+         grid-column-gap: .2rem;
+         grid-template-columns: repeat(8, 1fr);
+         width: 100%;
+
+         @media only screen and (max-width:$bp-small) {
+            grid-row: 3 / -1;
+            
+           } 
+
+        
+      
+         &--item {
+            border: 1px solid #000;
+            height: 25rem;
+            width: 25%; 
+            overflow: hidden;
+            position: relative;
+            @media only screen and (max-width:$bp-medium-2) {
+                width: 50%;
+               } 
+            @media only screen and (max-width:$bp-small-3) {
+                width: 100%;
+               } 
+      
+            
+            &--img {
+               width: 100%;
+               height:100%;   
+               
+            }
+    
+         }
+
+         &--overlay {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0 ;
+            background: rgba(14, 14, 17, 0.9);
+            transition: all .7s ease;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:hover &--h3{
+                transform: translateY(-30%);
+            }
+            &:hover &--p{
+                transform: translateY(30%);
+            }
+            
+
+            &--h3{
+               color: $color-primary;
+               font-size:2rem;
+               text-transform: uppercase;
+               font-weight: 600;
+               margin-top: 1rem;
+               transform: translateY(30%);
+            }
+
+            &--p {
+               color: #fff;
+               margin-top: 19rem;
+               transform: translateY(-30%);
+            }
+         }
+
+         
+
+     }    
+}

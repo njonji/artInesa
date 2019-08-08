@@ -1,0 +1,53 @@
+#footer {
+    background-image:linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(/img/header/bonsai-2.jpg); 
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 5rem;
+    margin: 0;
+}
+
+.footer {
+    text-align: center;
+    &__p {
+        color: #fff;
+        font-size: 1.2rem;
+
+        &--span {
+            color: $color-primary;
+        }
+    }
+
+}
+.admin-btn {
+    background: $color-primary !important;
+    outline-color: $color-primary !important;
+    border-color: $color-primary !important;
+}
+
+.admin-btn:hover {
+   color: black !important;
+
+}
+.admin-login {
+    background: $color-primary !important;
+    outline-color: $color-primary !important;
+    border-color: $color-primary !important;
+   
+}
+.admin-login:hover {
+    color: black !important;
+}
+.inesa-admin {
+    font-size: 2rem;
+    color: $color-primary;
+}
+
+.blog-btn {
+    background: $color-primary !important;
+    outline-color: $color-primary !important;
+    border-color: $color-primary !important;
+}
+
+.blog-btn:hover {
+    color: black !important;
+}
